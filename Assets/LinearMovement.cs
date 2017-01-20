@@ -16,7 +16,7 @@ namespace Castle
         float rightConstraint = Screen.width;
         float bottomConstraint = Screen.height;
         float topConstraint = Screen.height;
-        float buffer = 1.0f;
+        float buffer = 2.0f;
         Camera cam;
         float distanceZ;
 
@@ -56,19 +56,19 @@ namespace Castle
             oldVelocity = r2d.velocity;
             if (transform.position.x < leftConstraint - buffer)
             {
-                transform.position = new Vector3(rightConstraint + buffer, transform.position.y, transform.position.z);
+                Destroy(gameObject);
             }
             if (transform.position.x > rightConstraint + buffer)
             {
-                transform.position = new Vector3(leftConstraint - buffer, transform.position.y, transform.position.z);
+                Destroy(gameObject);
             }
             if (transform.position.y < bottomConstraint - buffer)
             {
-                transform.position = new Vector3(transform.position.x, topConstraint + buffer, transform.position.z);
+                Destroy(gameObject);
             }
-            if (transform.position.y > topConstraint + buffer)
+            if (transform.position.y > topConstraint - buffer)
             {
-                transform.position = new Vector3(transform.position.x, bottomConstraint - buffer, transform.position.z);
+                Destroy(gameObject);
             }
         }
     }

@@ -26,7 +26,7 @@ public class MapManager : MonoBehaviour {
         {
             for (int j = 0; j < LANES; j++)
             {
-                var tile = GameObject.Instantiate(WaterTile, new Vector3( j * tilesize, tilesize * rowcounter), Quaternion.identity);
+                var tile = GameObject.Instantiate(SandTile, new Vector3( j * tilesize, tilesize * rowcounter), Quaternion.identity);
                 tile.name = "Water " + rowcounter + " / " + j;
             }
         }
