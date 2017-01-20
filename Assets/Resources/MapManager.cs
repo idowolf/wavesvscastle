@@ -14,6 +14,8 @@ public class MapManager : MonoBehaviour {
     private const float tilesize = 2.239f;
     public GameObject WaterTile;
     public GameObject SandTile;
+    public GameObject Castle;
+    
 
     void Start()
     {
@@ -43,7 +45,10 @@ public class MapManager : MonoBehaviour {
             for (int j = 0; j < LANES; j++)
             {
                 var tile = GameObject.Instantiate(SandTile, new Vector3(j * tilesize,tilesize * rowcounter), Quaternion.identity);
-                tile.name = "Castle " + rowcounter + " / " + j;
+                tile.name = "Sand " + rowcounter + " / " + j;
+                var cas = GameObject.Instantiate(Castle, new Vector3(j * tilesize, tilesize * rowcounter), Quaternion.identity, tile.transform);
+                cas.name = "Castle " + rowcounter + " / " + j;
+               
             }
         }
     }

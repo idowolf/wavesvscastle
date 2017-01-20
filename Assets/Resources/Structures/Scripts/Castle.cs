@@ -10,9 +10,10 @@ namespace Castle {
         public Sprite[] spritestates = new Sprite[5];
         private int state = 0;
 
-        public Castle()
+        public void Start()
         {
-            this.state = 1;
+            this.state = 4;
+            gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
         }
         public void Upgrade()
         {
@@ -22,6 +23,11 @@ namespace Castle {
         public void Downgrade()
         {
             this.state--;
+            gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
+        }
+        public void SetBase()
+        {
+            this.state = 0;
             gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
         }
     }
