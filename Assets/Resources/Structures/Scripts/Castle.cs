@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Castle {
+namespace Tiles {
     class Castle : MonoBehaviour {
 
         public Sprite[] spritestates = new Sprite[5];
@@ -29,6 +29,10 @@ namespace Castle {
         {
             this.state = 0;
             gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
+        }
+        public int GetState()
+        {
+            return this.state;
         }
     }
 }

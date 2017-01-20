@@ -15,10 +15,7 @@ namespace Tiles {
             {
                 if (tile.GetComponentInChildren<Castle>().GetState() < 4)
                     tile.GetComponentInChildren<Castle>().Upgrade();
-            }
-            
-            
-            return;
+            }                     
         }
 
 
