@@ -25,5 +25,10 @@ namespace Castle {
             this.state--;
             gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
         }
+        public void SetBase()
+        {
+            this.state = 0;
+            gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
+        }
     }
 }

@@ -218,6 +218,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1377034406
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4091808052787806, guid: 66d3a901ed107ab418a81d40b28a0177, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091808052787806, guid: 66d3a901ed107ab418a81d40b28a0177, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091808052787806, guid: 66d3a901ed107ab418a81d40b28a0177, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091808052787806, guid: 66d3a901ed107ab418a81d40b28a0177, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091808052787806, guid: 66d3a901ed107ab418a81d40b28a0177, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091808052787806, guid: 66d3a901ed107ab418a81d40b28a0177, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091808052787806, guid: 66d3a901ed107ab418a81d40b28a0177, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091808052787806, guid: 66d3a901ed107ab418a81d40b28a0177, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198614517520861818, guid: 66d3a901ed107ab418a81d40b28a0177,
+        type: 2}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 198614517520861818, guid: 66d3a901ed107ab418a81d40b28a0177,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1114335511
+      objectReference: {fileID: 0}
+    - target: {fileID: 198614517520861818, guid: 66d3a901ed107ab418a81d40b28a0177,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198614517520861818, guid: 66d3a901ed107ab418a81d40b28a0177,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minCurve.m_Curve.Array.data[0].value
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 66d3a901ed107ab418a81d40b28a0177, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1642478888
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +309,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaterTile: {fileID: 1369753657691370, guid: d6d0426be6b4fe9489225d3eb03c383e, type: 2}
   SandTile: {fileID: 1828741242900166, guid: be7126c24a578bf4b856932338a7559d, type: 2}
-  Castle: {fileID: 1167522595650306, guid: 042db3bf93058384e9eaf06e1b06c7fa, type: 2}
 --- !u!4 &1642478890
 Transform:
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114729600721806912}
   - component: {fileID: 212577110113181380}
   - component: {fileID: 61532289079031102}
+  - component: {fileID: 50270209895477718}
   m_Layer: 0
   m_Name: SandTile
   m_TagString: Untagged
@@ -30,6 +31,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!50 &50270209895477718
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828741242900166}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61532289079031102
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -55,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f755ca1a3aef6a419d404b679e120c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DryTime: 2
+  DryTime: 4
 --- !u!212 &212577110113181380
 SpriteRenderer:
   m_ObjectHideFlags: 1

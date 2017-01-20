@@ -202,9 +202,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2093241878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd4e4317def1b184d9192651580208a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 15a8f2eefe976d44cb1298668c7f6280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heightMargin: 0.35
+  widthMargin: 0.35
 --- !u!4 &2093241880
 Transform:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ namespace Tiles {
     class SandTile : MonoBehaviour {
         SpriteRenderer sprite;
 
-        public float DryTime = 2f;
+        public float DryTime = 8f;
         private Color WetColor = new Color(0.7f, 0.7f, 0.7f);
         private Color DryColor = new Color(1, 1, 1);
         private bool isWet;
@@ -18,10 +18,13 @@ namespace Tiles {
             
         }
 
-        private void OnCollisionEnter2D(Collision2D collision) {
-            if (collision.collider.tag == "Water") {
+        void OnTriggerExit2D(Collider2D collision) {
+            Debug.Log("Fucknimrod2000");
+
+            if (collision.gameObject.tag == "Water") {
                 isWet = true;
                 sprite.color = WetColor;
+
                 Invoke("DryUp", DryTime);
             }
         }
