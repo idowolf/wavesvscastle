@@ -14,7 +14,6 @@ public class MapManager : MonoBehaviour {
     private const float tilesize = 2.239f;
     public GameObject WaterTile;
     public GameObject SandTile;
-    public GameObject CastleTile;
 
     void Start()
     {
@@ -25,7 +24,8 @@ public class MapManager : MonoBehaviour {
         {
             for (int j = 0; j < LANES; j++)
             {
-                GameObject.Instantiate(WaterTile, new Vector3( j * tilesize, tilesize * rowcounter), Quaternion.identity);
+                var tile = GameObject.Instantiate(WaterTile, new Vector3( j * tilesize, tilesize * rowcounter), Quaternion.identity);
+                tile.name = "Water " + rowcounter + " / " + j;
             }
         }
         currentrow = rowcounter;
@@ -33,7 +33,8 @@ public class MapManager : MonoBehaviour {
         {
             for (int j = 0; j < LANES; j++)
             {
-                GameObject.Instantiate(SandTile, new Vector3(j * tilesize, tilesize * rowcounter), Quaternion.identity);
+                var tile = GameObject.Instantiate(SandTile, new Vector3(j * tilesize, tilesize * rowcounter), Quaternion.identity);
+                tile.name = "Sand " + rowcounter + " / " + j;
             }
         }
         currentrow = rowcounter;
@@ -41,7 +42,8 @@ public class MapManager : MonoBehaviour {
         {
             for (int j = 0; j < LANES; j++)
             {
-                GameObject.Instantiate(CastleTile, new Vector3(j * tilesize,tilesize * rowcounter), Quaternion.identity);
+                var tile = GameObject.Instantiate(SandTile, new Vector3(j * tilesize,tilesize * rowcounter), Quaternion.identity);
+                tile.name = "Castle " + rowcounter + " / " + j;
             }
         }
     }
