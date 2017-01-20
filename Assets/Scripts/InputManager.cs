@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Tiles;
 
 public class InputManager : MonoBehaviour {
 
     GameObject currentTool;
+
     private void Update() {
         // Handle native touch events
         foreach (Touch touch in Input.touches) {
@@ -37,10 +39,22 @@ public class InputManager : MonoBehaviour {
     }
 
     void DetectTouch(Vector3 touchPosition, bool isDrop) {
-        Debug.Log("Mouse Position: " + touchPosition.ToString());
         var position = Camera.main.ScreenToWorldPoint(touchPosition);
         var col = Physics2D.OverlapPoint(position);
-        print(col.name);
+        if (col) {
+            print((isDrop ? "Dropping on " : "Dragging from ") + col.name);
+            if(!isDrop && col.gameObject.tag == "Tool") {
+                // change current tool
+                currentTool = col.gameObject;
+            }
+            if (isDrop && currentTool != null) {
+                SandTile tile = col.gameObject.GetComponent<SandTile>();
+                if (tile && !tile.IsWet) {
+                    // activate tool on tile
+                    
+                }
+            }
+        }
     }
-  
+
 }
