@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Castle {
+namespace Tiles {
     class Castle : MonoBehaviour {
 
         public Sprite[] spritestates = new Sprite[5];
