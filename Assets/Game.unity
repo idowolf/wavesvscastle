@@ -247,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaterTile: {fileID: 1369753657691370, guid: d6d0426be6b4fe9489225d3eb03c383e, type: 2}
   SandTile: {fileID: 1828741242900166, guid: be7126c24a578bf4b856932338a7559d, type: 2}
-  CastleTile: {fileID: 1142987145198874, guid: 46a872d748f33f3409b34fcbc159403b, type: 2}
+  Castle: {fileID: 1167522595650306, guid: 042db3bf93058384e9eaf06e1b06c7fa, type: 2}
 --- !u!4 &1642478890
 Transform:
   m_ObjectHideFlags: 0
