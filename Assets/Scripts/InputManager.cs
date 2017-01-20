@@ -5,7 +5,7 @@ using Tiles;
 
 public class InputManager : MonoBehaviour {
 
-    GameObject currentTool;
+    Tool currentTool;
 
     private void Update() {
         // Handle native touch events
@@ -45,12 +45,13 @@ public class InputManager : MonoBehaviour {
             print((isDrop ? "Dropping on " : "Dragging from ") + col.name);
             if(!isDrop && col.gameObject.tag == "Tool") {
                 // change current tool
-                currentTool = col.gameObject;
+                currentTool = col.gameObject.GetComponent<Tool>();
             }
             if (isDrop && currentTool != null) {
                 SandTile tile = col.gameObject.GetComponent<SandTile>();
                 if (tile && !tile.IsWet) {
                     // activate tool on tile
+                    currentTool.WorkOnTile(tile);
                     
                 }
             }
