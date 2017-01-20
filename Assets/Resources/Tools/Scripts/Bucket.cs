@@ -1,11 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Tiles;
 using UnityEngine;
 
-public class Bucket : MonoBehaviour {
+ class Bucket : MonoBehaviour, Tool {
+    public void WorkOnTile(SandTile tile) {
+        throw new NotImplementedException();
+    }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
