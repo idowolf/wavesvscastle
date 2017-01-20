@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 212810646939787844}
   - component: {fileID: 114881722348964544}
   - component: {fileID: 114464714728234316}
+  - component: {fileID: 114929880424523594}
   m_Layer: 0
   m_Name: WavePrefab
   m_TagString: Water
@@ -106,6 +107,17 @@ MonoBehaviour:
   moveToCenter: 0
   speed: 0.1
   bullet: {fileID: 0}
+--- !u!114 &114929880424523594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487776300314728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4e4317def1b184d9192651580208a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198614517520861818
 ParticleSystem:
   m_ObjectHideFlags: 1

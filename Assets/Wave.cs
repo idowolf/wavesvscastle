@@ -25,5 +25,9 @@ namespace Tiles
                 Destroy(gameObject);
             }
         }
+        void OnDestroy()
+        {
+            GameObject.Instantiate(Resources.Load("Prefab/WaveSplash"), new Vector3(transform.position.x, transform.position.y, 0),new Quaternion(-179.996f, -0.302002f, -89.81598f, 0));
+        }
     }
 }

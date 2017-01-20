@@ -30,5 +30,9 @@ namespace Tiles {
             this.state = 0;
             gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
         }
+        public int GetState()
+        {
+            return this.state;
+        }
     }
 }
