@@ -15,14 +15,19 @@ namespace Tiles {
         }
         public void Upgrade()
         {
-            print("state: " + state);
-            this.state++;
+            this.state=4;
             gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
         }
         public void Downgrade()
         {
             this.state--;
-            gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
+            if (this.state == -1)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+                gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
+
         }
         public void SetBase()
         {

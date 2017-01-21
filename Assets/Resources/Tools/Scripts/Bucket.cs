@@ -17,6 +17,7 @@ namespace Tiles
             if (tile.transform.childCount == 0)
             {
                 var cas = GameObject.Instantiate(Castle, tile.transform.localPosition, Quaternion.identity, tile.transform);
+                cas.tag = "Castle";
                 cas.GetComponent<Castle>().SetBase();
                 print(cas.GetComponent<Castle>().GetState());
             }

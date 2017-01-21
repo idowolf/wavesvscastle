@@ -18,6 +18,8 @@ namespace Tiles
         public GameObject WaterTile;
         public GameObject SandTile;
         public GameObject Castle;
+        public GameObject Toolbar;
+
 
 
         void Start()
@@ -55,6 +57,7 @@ namespace Tiles
 
                 }
             }
+            var toolbar = GameObject.Instantiate(Toolbar, new Vector3(5f, tilesize * rowcounter), Quaternion.identity);
         }
 
         // Update is called once per frame

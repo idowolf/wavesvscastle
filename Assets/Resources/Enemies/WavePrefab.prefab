@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   degree: 0
   moveToCenter: 0
-  speed: 0.1
+  speed: 0.5
   bullet: {fileID: 0}
 --- !u!114 &114929880424523594
 MonoBehaviour:
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4e4317def1b184d9192651580208a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Splash: {fileID: 1411195551037204, guid: 22238179fc1c461498d5bf5c01119af8, type: 2}
 --- !u!198 &198614517520861818
 ParticleSystem:
   m_ObjectHideFlags: 1

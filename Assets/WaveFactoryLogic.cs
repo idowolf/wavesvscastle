@@ -6,12 +6,11 @@ namespace Castle
 
     public class WaveFactoryLogic : MonoBehaviour
     {
-        private GameObject wave;
+        public GameObject wave;
         public float spawnTime;
         // Use this for initialization
         void Start()
         {
-            wave = Resources.Load("Prefab/WavePrefab") as GameObject;
             InvokeRepeating("addWave", 0, spawnTime);
 
         }

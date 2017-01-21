@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritestates:
-  - {fileID: 21300000, guid: e835f5292998b2349887a3db94d0e8e1, type: 3}
+  - {fileID: 21300000, guid: 12adfc20c3473d0449a9f9fe3bcbea70, type: 3}
   - {fileID: 21300000, guid: e835f5292998b2349887a3db94d0e8e1, type: 3}
   - {fileID: 21300000, guid: 6f198ec8f927e474fb9e8ca0a77e9481, type: 3}
   - {fileID: 21300000, guid: cdd406ff5d014a247bde891758e95b9b, type: 3}
