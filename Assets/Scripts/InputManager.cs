@@ -48,7 +48,7 @@ public class InputManager : MonoBehaviour {
                 currentTool = col.gameObject.GetComponent<Tool>();
             }
             if (isDrop && currentTool != null) {
-                SandTile tile = col.gameObject.GetComponent<SandTile>();
+                SandTile tile = col.gameObject.GetComponentInParent<SandTile>();
                 if (tile && !tile.IsWet) {
                     // activate tool on tile
                     currentTool.WorkOnTile(tile);

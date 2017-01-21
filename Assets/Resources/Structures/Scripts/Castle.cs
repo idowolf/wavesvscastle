@@ -8,15 +8,14 @@ namespace Tiles {
     class Castle : MonoBehaviour {
 
         public Sprite[] spritestates = new Sprite[5];
-        private int state = 0;
+        private int state = 4;
 
         public void Start()
         {
-            this.state = 4;
-            gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
         }
         public void Upgrade()
         {
+            print("state: " + state);
             this.state++;
             gameObject.GetComponent<SpriteRenderer>().sprite = spritestates[this.state];
         }
