@@ -17,7 +17,7 @@ public class OffButton : MonoBehaviour {
     public void GoToMenu()
     {
         print("tada");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Welcome");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
 
     }
 }
