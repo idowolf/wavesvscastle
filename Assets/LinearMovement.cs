@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Castle
+namespace Tiles
 {
 
     public class LinearMovement : MonoBehaviour

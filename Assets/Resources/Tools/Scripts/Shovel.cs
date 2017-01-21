@@ -18,6 +18,14 @@ namespace Tiles {
                 }
             }
         }
+        public void WorkOnTile(Crabs crab)
+        {
+
+        }
+        public String ToolName()
+        {
+            return "Shovel";
+        }
 
 
     }

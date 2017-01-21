@@ -106,7 +106,6 @@ MonoBehaviour:
   degree: 0
   moveToCenter: 0
   speed: 200
-  bullet: {fileID: 0}
 --- !u!114 &114929880424523594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2711,7 +2710,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 1
   m_SortMode: 0
   m_MinParticleSize: 0
