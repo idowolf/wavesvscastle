@@ -2,10 +2,12 @@
 using System.Collections;
 using System;
 using Tiles;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour {
 
     Tool currentTool;
+    public bool NextSceneOnTouch;
 
     private void Update() {
         // Handle native touch events
@@ -41,6 +43,11 @@ public class InputManager : MonoBehaviour {
     void DetectTouch(Vector3 touchPosition, bool isDrop) {
         var position = Camera.main.ScreenToWorldPoint(touchPosition);
         var col = Physics2D.OverlapPoint(position);
+        if (isDrop && NextSceneOnTouch) {
+            //UGLY hack for welcome screen, no time left :-(
+            SceneManager.LoadScene(1);
+        }
+
         if (col) {
             print((isDrop ? "Dropping on " : "Dragging from ") + col.name);
             if(!isDrop && col.gameObject.tag == "Tool") {

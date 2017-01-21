@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Tiles
 {
+    [ExecuteInEditMode]
     public class MapManager : MonoBehaviour
     {
         //public float heightMargin = 0.1f, widthMargin = 0.1f; // Magic numbers, set in editor for best optimization
