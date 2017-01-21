@@ -37,10 +37,11 @@ namespace Tiles
         {
             castle.Downgrade();
             yield return new WaitForSeconds(2f);
-            if(castle.GetState() >= 0)
+            if(castle)
                 StartCoroutine(DestroyCastle(castle));
             else
             {
+                Debug.Log("test");
                 GetComponentInChildren<Animator>().SetBool("killcastle", false);
                 GetComponent<Rigidbody2D>().AddForce(transform.up * (-1) * GetComponent<LinearMovement>().speed * Time.deltaTime, ForceMode2D.Impulse);
             }
