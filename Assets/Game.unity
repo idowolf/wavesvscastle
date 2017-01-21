@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca54639ced86414a85d50032f0e4cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NextSceneOnTouch: 0
 --- !u!4 &881580415
 Transform:
   m_ObjectHideFlags: 0
@@ -454,6 +455,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114075330982467892, guid: 8e571a74b25dc704f8222fa78ffe5d39,
+        type: 2}
+      propertyPath: crab
+      value: 
+      objectReference: {fileID: 1290717666274782, guid: 9efb73d74e23eea4badfb304c90dc38d,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e571a74b25dc704f8222fa78ffe5d39, type: 2}
   m_IsPrefabParent: 0

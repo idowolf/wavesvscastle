@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 224748292129970506}
   - component: {fileID: 222958975334965102}
   - component: {fileID: 212251668279743472}
-  - component: {fileID: 114339986835665924}
   - component: {fileID: 61777173879214118}
   - component: {fileID: 82936100166356378}
+  - component: {fileID: 114854417436295720}
   m_Layer: 0
   m_Name: Net
   m_TagString: Tool
@@ -125,7 +125,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114339986835665924
+--- !u!114 &114854417436295720
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -133,10 +133,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1651220907767266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04c8761929be11f49bbf921f30cc60b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 44d3ec18a5a1ce7489e56493e9ad0fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  build: {fileID: 0}
 --- !u!212 &212251668279743472
 SpriteRenderer:
   m_ObjectHideFlags: 1
