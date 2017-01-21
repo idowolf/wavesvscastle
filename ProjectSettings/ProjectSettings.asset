@@ -6,11 +6,11 @@ PlayerSettings:
   serializedVersion: 10
   productGUID: 586c04430953e6540a1d764345b8a757
   AndroidProfiler: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: GGJ2017
   productName: SandCastle
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: com.Company.ProductName
+  bundleIdentifier: com.ggj2017.sandcastle
   bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
