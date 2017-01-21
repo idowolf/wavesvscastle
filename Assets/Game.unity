@@ -213,7 +213,7 @@ GameObject:
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -235,7 +235,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881580413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.650493, y: 2.0747051, z: 0}
+  m_LocalPosition: {x: 16.3, y: 18.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -471,7 +471,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642478888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.282227, y: 6.487793, z: -5.4970703}
+  m_LocalPosition: {x: 16.3, y: 15.4, z: -5.4970703}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -521,6 +521,12 @@ Prefab:
       propertyPath: spawnTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114301739369128526, guid: bed905500b18d134c8ba1c6635274e79,
+        type: 2}
+      propertyPath: wave
+      value: 
+      objectReference: {fileID: 1487776300314728, guid: 66d3a901ed107ab418a81d40b28a0177,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bed905500b18d134c8ba1c6635274e79, type: 2}
   m_IsPrefabParent: 0
