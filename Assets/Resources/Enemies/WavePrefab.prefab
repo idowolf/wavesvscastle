@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Splash: {fileID: 1411195551037204, guid: 22238179fc1c461498d5bf5c01119af8, type: 2}
   Shell: {fileID: 0}
+  crash: {fileID: 0}
 --- !u!198 &198614517520861818
 ParticleSystem:
   m_ObjectHideFlags: 1

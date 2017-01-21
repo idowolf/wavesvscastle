@@ -7,4 +7,5 @@ interface Tool {
     void WorkOnTile(SandTile tile);
     void WorkOnTile(Crabs crab);
     string ToolName();
+    void Click();
 }

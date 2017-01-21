@@ -11,8 +11,8 @@ namespace Tiles
         // Use this for initialization
 
         private const int LANES = 5;
-        private const int WATER_ROWS = 1;
-        private const int SAND_ROWS = 5;
+        private const int WATER_ROWS = 0;
+        private const int SAND_ROWS = 6;
         private const int CASTLE_ROWS = 2;
         private const int TOOLBAR = 1;
         private const float tilesize = 2.239f;
@@ -29,17 +29,18 @@ namespace Tiles
         public GameObject Quit;
         void Start()
         {
+            AudioListener.pause = false;
             //Create WaterTiles
             int currentrow = 0;
             int rowcounter = 0;
-            for (; rowcounter < WATER_ROWS; rowcounter++)
-            {
-                for (int j = 0; j < LANES; j++)
-                {
-                    var tile = GameObject.Instantiate(WaterTile, new Vector3(j * tilesize, tilesize * rowcounter), Quaternion.identity);
-                    tile.name = "Water " + rowcounter + " / " + j;
-                }
-            }
+            //for (; rowcounter < WATER_ROWS; rowcounter++)
+            //{
+            //    for (int j = 0; j < LANES; j++)
+            //    {
+            //        var tile = GameObject.Instantiate(WaterTile, new Vector3(j * tilesize, tilesize * rowcounter), Quaternion.identity);
+            //        tile.name = "Water " + rowcounter + " / " + j;
+            //    }
+            //}
             currentrow = rowcounter;
             for (; rowcounter < SAND_ROWS + currentrow; rowcounter++)
             {
