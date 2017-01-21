@@ -14,8 +14,13 @@ namespace Tiles
         }
 
         // Update is called once per frame
-        void Update() {
-
+        void Update()
+        {
+            if (transform.position.y > 16.8f)
+            {
+                GetComponentInChildren<Animator>().SetBool("killcastle", false);
+                GetComponent<Rigidbody2D>().AddForce(transform.up * (-1) * GetComponent<LinearMovement>().speed * 0.5f * Time.deltaTime, ForceMode2D.Impulse);
+            }
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -27,10 +32,21 @@ namespace Tiles
         {
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             GetComponentInChildren<Animator>().SetBool("killcastle", true);
-            castle.Downgrade();
+            StartCoroutine(DowngradeTheCastle(castle));
+            yield return new WaitForSeconds(3f);
+        }
+
+        IEnumerator DowngradeTheCastle(Castle castle)
+        {
+            if(castle.GetState() >= 0)
+                castle.Downgrade();
+            else
+            {
+                GetComponentInChildren<Animator>().SetBool("killcastle", false);
+                GetComponent<Rigidbody2D>().AddForce(transform.up * (-1) * GetComponent<LinearMovement>().speed * 0.5f * Time.deltaTime, ForceMode2D.Impulse);
+            }
             yield return new WaitForSeconds(2f);
-            GetComponentInChildren<Animator>().SetBool("killcastle", false);
-            GetComponent<Rigidbody2D>().AddForce(transform.up * (-1) * GetComponent<LinearMovement>().speed * 0.5f * Time.deltaTime, ForceMode2D.Impulse);
+            StartCoroutine(DowngradeTheCastle(castle));
         }
     }
 

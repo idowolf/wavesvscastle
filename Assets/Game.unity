@@ -257,6 +257,11 @@ Prefab:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212251668279743472, guid: 292f31ec9d4b86043afdaacfa58d4bf9,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 292f31ec9d4b86043afdaacfa58d4bf9, type: 2}
   m_IsPrefabParent: 0
@@ -658,6 +663,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212988848456001364, guid: 5d66db03880a6fa4e8793b4a57061607,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d66db03880a6fa4e8793b4a57061607, type: 2}
   m_IsPrefabParent: 0
@@ -670,7 +680,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4716521968110346, guid: ccb5dee94e117434c8d1d8e0dc7de3a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.8
+      value: 4.49
       objectReference: {fileID: 0}
     - target: {fileID: 4716521968110346, guid: ccb5dee94e117434c8d1d8e0dc7de3a8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -699,6 +709,16 @@ Prefab:
     - target: {fileID: 4716521968110346, guid: ccb5dee94e117434c8d1d8e0dc7de3a8, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198045466860832732, guid: ccb5dee94e117434c8d1d8e0dc7de3a8,
+        type: 2}
+      propertyPath: ShapeModule.boxX
+      value: 11.346018
+      objectReference: {fileID: 0}
+    - target: {fileID: 198045466860832732, guid: ccb5dee94e117434c8d1d8e0dc7de3a8,
+        type: 2}
+      propertyPath: randomSeed
+      value: -61188757
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccb5dee94e117434c8d1d8e0dc7de3a8, type: 2}
@@ -1108,6 +1128,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212495714901629114, guid: 8eb28d1f57c65564497c0181cb96f6a9,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8eb28d1f57c65564497c0181cb96f6a9, type: 2}

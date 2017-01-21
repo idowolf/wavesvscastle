@@ -50,14 +50,18 @@ namespace Tiles
         {
 
         }
+        void Update()
+        {
+
+        }
         public void Click()
         {
             GetComponent<AudioSource>().Play();
         }
-        // Update is called once per frame
-        void Update()
-        {
 
+        public bool IsThisEmpty()
+        {
+            return IsEmpty;
         }
     }
 }
