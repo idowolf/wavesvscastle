@@ -41,6 +41,7 @@ public class InputManager : MonoBehaviour {
     void DetectTouch(Vector3 touchPosition, bool isDrop) {
         var position = Camera.main.ScreenToWorldPoint(touchPosition);
         var col = Physics2D.OverlapPoint(position);
+
         if (col) {
             print((isDrop ? "Dropping on " : "Dragging from ") + col.name);
             if(!isDrop && col.gameObject.tag == "Tool") {
@@ -48,10 +49,15 @@ public class InputManager : MonoBehaviour {
                 currentTool = col.gameObject.GetComponent<Tool>();
             }
             if (isDrop && currentTool != null) {
-                SandTile tile = col.gameObject.GetComponentInParent<SandTile>();
-                Crabs crab = col.gameObject.GetComponentInParent<Crabs>();
+                SandTile tile = col.gameObject.GetComponent<SandTile>();
+                Crabs crab = col.gameObject.GetComponent<Crabs>();
+                Debug.Log(currentTool.ToolName());
                 if ((currentTool.ToolName() == "Net") && crab != null)
+                {
+                    Debug.Log(crab.gameObject.name);
                     currentTool.WorkOnTile(crab);
+
+                }
                 if (tile && (currentTool.ToolName() != "Net")) {
                     // activate tool on tile
                     currentTool.WorkOnTile(tile);

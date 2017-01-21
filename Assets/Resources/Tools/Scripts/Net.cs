@@ -14,7 +14,7 @@ namespace Tiles
         }
         public void WorkOnTile(Crabs crab)
         {
-            Destroy(crab);
+            Destroy(crab.gameObject);
         }
     public String ToolName()
     {
