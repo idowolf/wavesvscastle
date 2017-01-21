@@ -45,7 +45,12 @@ public class InputManager : MonoBehaviour {
         var col = Physics2D.OverlapPoint(position);
         if (isDrop && NextSceneOnTouch) {
             //UGLY hack for welcome screen, no time left :-(
-            SceneManager.LoadScene(1);
+            if (col.name == "OffButton") {
+                Application.Quit();
+            }
+            else {
+                SceneManager.LoadScene(1);
+            }
         }
 
         if (col) {
