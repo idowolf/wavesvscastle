@@ -21,6 +21,7 @@ namespace Tiles {
         public void Downgrade()
         {
             this.state--;
+            Debug.Log(state);
             if (this.state == -1)
             {
                 Destroy(this.gameObject);

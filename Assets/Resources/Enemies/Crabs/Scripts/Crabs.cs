@@ -15,35 +15,22 @@ namespace Tiles
 
         // Update is called once per frame
         void Update() {
-            if (transform.position.y > topBorder)
-            {
-                StartCoroutine(ChangeAnimationMode());
-            }
-        }
 
-        IEnumerator ChangeAnimationMode()
-        {
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            GetComponentInChildren<Animator>().SetBool("killcastle", true);
-            yield return new WaitForSeconds(2f);
         }
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.GetComponent<Castle>())
-                StartCoroutine(DestroyCastle(other.GetComponent<Castle>()));
+            if (other.GetComponentInChildren<Castle>())
+                StartCoroutine(DestroyCastle(other.GetComponentInChildren<Castle>()));
         }
         IEnumerator DestroyCastle(Castle castle)
         {
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            GetComponentInChildren<Animator>().SetBool("killcastle", true);
             castle.Downgrade();
             yield return new WaitForSeconds(2f);
-            if(castle)
-                StartCoroutine(DestroyCastle(castle));
-            else
-            {
-                GetComponentInChildren<Animator>().SetBool("killcastle", false);
-                GetComponent<Rigidbody2D>().AddForce(transform.up * (-1) * GetComponent<LinearMovement>().speed * 0.5f * Time.deltaTime, ForceMode2D.Impulse);
-            }
+            GetComponentInChildren<Animator>().SetBool("killcastle", false);
+            GetComponent<Rigidbody2D>().AddForce(transform.up * (-1) * GetComponent<LinearMovement>().speed * 0.5f * Time.deltaTime, ForceMode2D.Impulse);
         }
     }
 
