@@ -14,6 +14,7 @@ namespace Tiles {
             else {
                 var castle = tile.transform.GetChild(0);
                 var castleComponent = castle.GetComponent<Castle>();
+                print(castleComponent.GetState());
                 if (castleComponent.GetState() < 4) {
                     castleComponent.Upgrade();
                     GetComponent<AudioSource>().PlayOneShot(build);

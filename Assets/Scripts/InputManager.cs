@@ -56,7 +56,7 @@ public class InputManager : MonoBehaviour {
                 }
             }
             if (isDrop && currentTool != null) {
-                SandTile tile = col.gameObject.GetComponent<SandTile>();
+                SandTile tile = col.gameObject.GetComponentInParent<SandTile>();
                 Crabs crab = col.gameObject.GetComponent<Crabs>();
                 Debug.Log(currentTool.ToolName());
                 if ((currentTool.ToolName() == "Net") && crab != null)
@@ -66,8 +66,11 @@ public class InputManager : MonoBehaviour {
 
                 }
                 if (tile && (currentTool.ToolName() != "Net")) {
-                    // activate tool on tile
-                    currentTool.WorkOnTile(tile);
+                    {
+                        // activate tool on tile
+                        print(tile.gameObject.name);
+                        currentTool.WorkOnTile(tile);
+                    }
                 }
                 currentTool = null;
             }
