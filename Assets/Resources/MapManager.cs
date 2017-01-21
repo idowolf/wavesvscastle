@@ -24,6 +24,8 @@ namespace Tiles
         public GameObject Net;
         public GameObject[] Buttons = new GameObject[4];
         private GameObject Menu;
+        public GameObject Restart;
+        public GameObject Quit;
         void Start()
         {
             //Create WaterTiles
@@ -67,15 +69,21 @@ namespace Tiles
             bucket.name = "Bucket";
             var shovel = GameObject.Instantiate(Shovel, new Vector3(tilesize * 2, tilesize * rowcounter), Quaternion.identity,toolbar.transform);
             shovel.name = "Shovel";
+            var net = GameObject.Instantiate(Net, new Vector3(tilesize * 3, tilesize * rowcounter), Quaternion.identity, toolbar.transform);
+            shovel.name = "Net";
             var button = GameObject.Instantiate(Buttons[0], new Vector3(tilesize * -0.22f, tilesize * rowcounter*1.025f), Quaternion.identity,Menu.transform);
             button.name = "Play";
             button = GameObject.Instantiate(Buttons[1], new Vector3(tilesize * 0.22f, tilesize * rowcounter * 1.025f), Quaternion.identity, Menu.transform);
             button.name = "Pause";
             button = GameObject.Instantiate(Buttons[2], new Vector3(tilesize * -0.22f, tilesize * rowcounter *0.975f), Quaternion.identity, Menu.transform);
             button.name = "Sound";
-            var volume = GameObject.Instantiate(Buttons[3], new Vector3(tilesize * 0.22f, tilesize * rowcounter * 0.975f), Quaternion.identity, Menu.transform);
+            button = GameObject.Instantiate(Buttons[3], new Vector3(tilesize * 0.22f, tilesize * rowcounter * 0.975f), Quaternion.identity, Menu.transform);
             button.name = "Info";
             Menu.transform.localPosition = new Vector3(Menu.transform.localPosition.x, Menu.transform.localPosition.y-0.05f, Menu.transform.localPosition.z);
+            var restart = GameObject.Instantiate(Restart, new Vector3(tilesize * 3.95f, tilesize * rowcounter), Quaternion.identity);
+            restart.name = "Restart";
+            var quit = GameObject.Instantiate(Quit, new Vector3(tilesize * 4.35f, tilesize * rowcounter * 1.04f), Quaternion.identity);
+            quit.name = "Off";
 
         }
 

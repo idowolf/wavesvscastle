@@ -22,7 +22,7 @@ namespace Tiles
             if (other.gameObject.tag == "Castle")
             {
                 other.gameObject.GetComponent<Castle>().Downgrade();
-                GameObject.Instantiate(Splash, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity); //new Quaternion(-179.996f, -0.302002f, -89.81598f, 0));
+                GameObject.Instantiate(Splash, new Vector3(transform.position.x, 1.3f+transform.position.y, transform.position.z), new Quaternion(179.996f, 0.302002f, 89.81598f, 0));
                 Destroy(gameObject);
             }
             else if(other.gameObject.tag == "SandTile")

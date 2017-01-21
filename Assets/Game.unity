@@ -251,12 +251,14 @@ MonoBehaviour:
   Toolbar: {fileID: 1560663092842796, guid: 8e153e4971a2aca49abe10b53dbac835, type: 2}
   Bucket: {fileID: 1297877385393370, guid: 5d66db03880a6fa4e8793b4a57061607, type: 2}
   Shovel: {fileID: 1398227277700566, guid: 8eb28d1f57c65564497c0181cb96f6a9, type: 2}
-  Net: {fileID: 0}
+  Net: {fileID: 1651220907767266, guid: 292f31ec9d4b86043afdaacfa58d4bf9, type: 2}
   Buttons:
   - {fileID: 1029144840556188, guid: 4ce2bc47f95929d45ad4ea09174fd160, type: 2}
   - {fileID: 1936461601039232, guid: e3070c6258c4d40469befd8122098bab, type: 2}
   - {fileID: 1282152801807418, guid: 3e3fd8945ad5656449ba8f19a56ae329, type: 2}
   - {fileID: 1047629788015274, guid: 7aada24019505844ba37c09c49ba8b7b, type: 2}
+  Restart: {fileID: 1986535784178502, guid: f80fd581364c0cf4c866fd4930a5bdb7, type: 2}
+  Quit: {fileID: 1347785481221756, guid: ce513e4bdf219e646b7f39eff4f39350, type: 2}
 --- !u!4 &1642478890
 Transform:
   m_ObjectHideFlags: 0
