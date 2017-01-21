@@ -41,9 +41,8 @@ namespace Tiles
                 StartCoroutine(DestroyCastle(castle));
             else
             {
-                Debug.Log("test");
                 GetComponentInChildren<Animator>().SetBool("killcastle", false);
-                GetComponent<Rigidbody2D>().AddForce(transform.up * (-1) * GetComponent<LinearMovement>().speed * Time.deltaTime, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(transform.up * (-1) * GetComponent<LinearMovement>().speed * 0.5f * Time.deltaTime, ForceMode2D.Impulse);
             }
         }
     }
