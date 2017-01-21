@@ -11,7 +11,6 @@ namespace Castle
         public bool moveToCenter;
         public float speed;
         private Vector3 oldVelocity;
-        public GameObject bullet;
         float leftConstraint = Screen.width;
         float rightConstraint = Screen.width;
         float bottomConstraint = Screen.height;
@@ -35,7 +34,7 @@ namespace Castle
             {
                 transform.rotation = Quaternion.Euler(0f, 0f, 360 - degree);
             }
-            r2d.AddForce(transform.up * speed * 10, ForceMode2D.Impulse);
+            r2d.AddForce(transform.up * speed * Time.deltaTime, ForceMode2D.Impulse);
 
             cam = Camera.main;
             distanceZ = Mathf.Abs(cam.transform.position.z + transform.position.z);

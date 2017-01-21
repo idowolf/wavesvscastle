@@ -8,9 +8,12 @@ namespace Tiles {
     class SandTile : MonoBehaviour {
         SpriteRenderer sprite;
 
-        public float DryTime = 8f;
-        private Color WetColor = new Color(0.7f, 0.7f, 0.7f);
-        private Color DryColor = new Color(1, 1, 1);
+        public float DryTime;
+        public float WetTime;
+        private float dryValue = 1;
+        private float wetValue = 0.7f;
+        //private Color WetColor = new Color(0.7f, 0.7f, 0.7f);
+        //private Color DryColor = new Color(1, 1, 1);
         public bool IsWet { get; private set; }
 
         
@@ -19,20 +22,28 @@ namespace Tiles {
             
         }
 
-        void OnTriggerExit2D(Collider2D collider) {
+        void OnTriggerEnter2D(Collider2D collider) {
             if (collider.gameObject.tag == "Water") {
-                IsWet = true;
-                sprite.color = WetColor;
-
-                Invoke("DryUp", DryTime);
+                Invoke("WetMe", WetTime);
             }
         }
-        private void DryUp() {
-            IsWet = false;
-            sprite.color = DryColor;
-
+        private void WetMe() {
+            IsWet = true;
+            sprite.color = new Color(wetValue, wetValue,wetValue);
+            t = 0;
         }
-
-
+        float t = 0;
+        private void Update() {
+            if (IsWet) {
+                float val = Mathf.Lerp(wetValue, dryValue, t);
+                sprite.color = new Color(val, val, val);
+                t += Time.deltaTime / DryTime;
+                if(t >= dryValue) {
+                    t = 0;
+                    IsWet = false;
+                }
+            }
+        }
+      
     }
 }
