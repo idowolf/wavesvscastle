@@ -19,7 +19,7 @@ namespace Tiles {
         
         private void Start() {
             sprite = GetComponent<SpriteRenderer>();
-            //sprite.sprite = sprites[UnityEngine.Random.Range(0,2) == 1 ? (int)(UnityEngine.Random.Range(1f, sprites.Length)) : 0];
+            sprite.sprite = sprites[UnityEngine.Random.Range(0,2) == 1 ? (int)(UnityEngine.Random.Range(1f, sprites.Length)) : 0];
         }
 
         void OnTriggerEnter2D(Collider2D collider) {
