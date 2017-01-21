@@ -76,6 +76,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f755ca1a3aef6a419d404b679e120c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 9b600a154afc2c446a6b39e4c178fae0, type: 3}
+  - {fileID: 21300000, guid: 0f5a14f0bd2bf2041bc1b73866081e49, type: 3}
+  - {fileID: 21300000, guid: 2fcda3d83ded86e4fa35faf16e1de9fc, type: 3}
+  - {fileID: 21300000, guid: 5ec3ad8ad6966624d92f7f2ad4ebfb5b, type: 3}
+  - {fileID: 21300000, guid: 44335ecbf9db9ad48a399df3f83dc338, type: 3}
+  - {fileID: 21300000, guid: cedf28a14fec9b04abc3195b31416785, type: 3}
+  - {fileID: 21300000, guid: 3e1969488cf192b46b59b05325b196d1, type: 3}
   DryTime: 4
   WetTime: 0.6
 --- !u!212 &212577110113181380
