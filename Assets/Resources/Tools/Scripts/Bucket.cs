@@ -21,7 +21,7 @@ namespace Tiles
         }
         public void WorkOnTile(SandTile tile)
         {
-            if (tile.transform.childCount == 0)
+            if (tile.transform.childCount == 0 && !tile.IsWet)
             {
                 var cas = GameObject.Instantiate(Castle, tile.transform.localPosition, Quaternion.identity, tile.transform);
                 cas.tag = "Castle";
@@ -40,7 +40,14 @@ namespace Tiles
 
 
         }
+        public String ToolName()
+        {
+            return "Bucket";
+             }
+        public void WorkOnTile(Crabs crab)
+        {
 
+        }
         // Update is called once per frame
         void Update()
         {

@@ -49,10 +49,12 @@ public class InputManager : MonoBehaviour {
             }
             if (isDrop && currentTool != null) {
                 SandTile tile = col.gameObject.GetComponentInParent<SandTile>();
-                if (tile && !tile.IsWet) {
+                Crabs crab = col.gameObject.GetComponentInParent<Crabs>();
+                if ((currentTool.ToolName() == "Net") && crab != null)
+                    currentTool.WorkOnTile(crab);
+                if (tile && (currentTool.ToolName() != "Net")) {
                     // activate tool on tile
                     currentTool.WorkOnTile(tile);
-                    
                 }
                 currentTool = null;
             }
