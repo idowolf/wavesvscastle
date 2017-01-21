@@ -28,6 +28,7 @@ namespace Tiles
         public GameObject Quit;
         void Start()
         {
+            AudioListener.pause = false;
             //Create WaterTiles
             int currentrow = 0;
             int rowcounter = 0;

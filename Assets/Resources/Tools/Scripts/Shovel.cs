@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace Tiles {
     class Shovel : MonoBehaviour, Tool {
+        public AudioClip build;
 
         public void WorkOnTile(SandTile tile) {
             if (tile.transform.childCount == 0)
@@ -15,6 +16,7 @@ namespace Tiles {
                 var castleComponent = castle.GetComponent<Castle>();
                 if (castleComponent.GetState() < 4) {
                     castleComponent.Upgrade();
+                    GetComponent<AudioSource>().PlayOneShot(build);
                 }
             }
         }
@@ -26,7 +28,10 @@ namespace Tiles {
         {
             return "Shovel";
         }
-
+        public void Click()
+        {
+            GetComponent<AudioSource>().Play();
+        }
 
     }
 }

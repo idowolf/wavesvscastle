@@ -15,6 +15,7 @@ namespace Tiles
         private bool IsEmpty = false;
         public float spawntimer;
         private Collider2D col;
+        public AudioClip build;
         void Start()
         {
             col = GetComponent<Collider2D>();
@@ -28,6 +29,7 @@ namespace Tiles
                 cas.GetComponent<Castle>().SetBase();
                 col.enabled = false;
                 GetComponent<SpriteRenderer>().sprite = emptybucket;
+                GetComponent<AudioSource>().PlayOneShot(build);
                 StartCoroutine(FillBucket());
             }
         }
@@ -47,6 +49,10 @@ namespace Tiles
         public void WorkOnTile(Crabs crab)
         {
 
+        }
+        public void Click()
+        {
+            GetComponent<AudioSource>().Play();
         }
         // Update is called once per frame
         void Update()

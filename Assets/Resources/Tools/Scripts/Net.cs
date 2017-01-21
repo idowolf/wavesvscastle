@@ -20,7 +20,10 @@ namespace Tiles
     {
         return "Net";
     }
-
+        public void Click()
+        {
+            GetComponent<AudioSource>().Play();
+        }
 
     }
 }

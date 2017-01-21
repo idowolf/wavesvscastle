@@ -6,7 +6,7 @@ using Tiles;
 public class InputManager : MonoBehaviour {
 
     Tool currentTool;
-
+    
     private void Update() {
         // Handle native touch events
         foreach (Touch touch in Input.touches) {
@@ -43,9 +43,16 @@ public class InputManager : MonoBehaviour {
         var col = Physics2D.OverlapPoint(position);
         if (col) {
             print((isDrop ? "Dropping on " : "Dragging from ") + col.name);
-            if(!isDrop && col.gameObject.tag == "Tool") {
-                // change current tool
-                currentTool = col.gameObject.GetComponent<Tool>();
+            if (!isDrop && col.gameObject.tag == "Mute")
+                col.gameObject.GetComponent<SoundMenu>().Mute();
+            if (!isDrop && col.gameObject.tag == "Off")
+                col.gameObject.GetComponent<OffButton>().GoToMenu();
+            if (!isDrop && col.gameObject.tag == "Tool") {
+                {
+                    // change current tool
+                    currentTool = col.gameObject.GetComponent<Tool>();
+                    currentTool.Click();
+                }
             }
             if (isDrop && currentTool != null) {
                 SandTile tile = col.gameObject.GetComponentInParent<SandTile>();
