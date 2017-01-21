@@ -55,9 +55,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6ac3d52bd415244832c83ce3599993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullbucket: {fileID: 0}
-  emptybucket: {fileID: 0}
+  fullbucket: {fileID: 21300000, guid: 5b9e675d7e485eb43acd43aa3f5062d6, type: 3}
+  emptybucket: {fileID: 21300000, guid: b237ea78092dc4e49aed37627bb543d3, type: 3}
   Castle: {fileID: 1167522595650306, guid: 042db3bf93058384e9eaf06e1b06c7fa, type: 2}
+  spawntimer: 5
 --- !u!212 &212988848456001364
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5b9e675d7e485eb43acd43aa3f5062d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

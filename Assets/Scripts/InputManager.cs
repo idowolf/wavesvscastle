@@ -54,6 +54,7 @@ public class InputManager : MonoBehaviour {
                     currentTool.WorkOnTile(tile);
                     
                 }
+                currentTool = null;
             }
         }
     }

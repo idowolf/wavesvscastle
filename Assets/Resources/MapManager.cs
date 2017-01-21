@@ -19,9 +19,11 @@ namespace Tiles
         public GameObject SandTile;
         public GameObject Castle;
         public GameObject Toolbar;
-
-
-
+        public GameObject Bucket;
+        public GameObject Shovel;
+        public GameObject Net;
+        public GameObject[] Buttons = new GameObject[4];
+        private GameObject Menu;
         void Start()
         {
             //Create WaterTiles
@@ -58,6 +60,23 @@ namespace Tiles
                 }
             }
             var toolbar = GameObject.Instantiate(Toolbar, new Vector3(5f, tilesize * rowcounter), Quaternion.identity);
+            toolbar.name = "Toolbar";
+            Menu = new GameObject();
+            Menu.name = "Menu";
+            var bucket = GameObject.Instantiate(Bucket, new Vector3(tilesize*1, tilesize * rowcounter), Quaternion.identity,toolbar.transform);
+            bucket.name = "Bucket";
+            var shovel = GameObject.Instantiate(Shovel, new Vector3(tilesize * 2, tilesize * rowcounter), Quaternion.identity,toolbar.transform);
+            shovel.name = "Shovel";
+            var button = GameObject.Instantiate(Buttons[0], new Vector3(tilesize * -0.22f, tilesize * rowcounter*1.025f), Quaternion.identity,Menu.transform);
+            button.name = "Play";
+            button = GameObject.Instantiate(Buttons[1], new Vector3(tilesize * 0.22f, tilesize * rowcounter * 1.025f), Quaternion.identity, Menu.transform);
+            button.name = "Pause";
+            button = GameObject.Instantiate(Buttons[2], new Vector3(tilesize * -0.22f, tilesize * rowcounter *0.975f), Quaternion.identity, Menu.transform);
+            button.name = "Sound";
+            var volume = GameObject.Instantiate(Buttons[3], new Vector3(tilesize * 0.22f, tilesize * rowcounter * 0.975f), Quaternion.identity, Menu.transform);
+            button.name = "Info";
+            Menu.transform.localPosition = new Vector3(Menu.transform.localPosition.x, Menu.transform.localPosition.y-0.05f, Menu.transform.localPosition.z);
+
         }
 
         // Update is called once per frame

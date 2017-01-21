@@ -12,6 +12,13 @@ namespace Tiles
         public Sprite fullbucket;
         public Sprite emptybucket;
         public GameObject Castle;
+        private bool IsEmpty = false;
+        public float spawntimer;
+        private Collider2D col;
+        void Start()
+        {
+            col = GetComponent<Collider2D>();
+        }
         public void WorkOnTile(SandTile tile)
         {
             if (tile.transform.childCount == 0)
@@ -19,13 +26,18 @@ namespace Tiles
                 var cas = GameObject.Instantiate(Castle, tile.transform.localPosition, Quaternion.identity, tile.transform);
                 cas.tag = "Castle";
                 cas.GetComponent<Castle>().SetBase();
-                print(cas.GetComponent<Castle>().GetState());
+                col.enabled = false;
+                GetComponent<SpriteRenderer>().sprite = emptybucket;
+                StartCoroutine(FillBucket());
             }
         }
-
-        // Use this for initialization
-        void Start()
+        private IEnumerator FillBucket()
         {
+
+            yield return new WaitForSeconds(spawntimer);
+            GetComponent<SpriteRenderer>().sprite = fullbucket;
+            col.enabled = true;
+
 
         }
 
