@@ -11,8 +11,6 @@ public class InputManager : MonoBehaviour {
     public bool NextSceneOnTouch;
     bool dragWithMouse;
     private void Update() {
-        if(currentTool)
-            Debug.Log(currentTool.name);
         if(dragWithMouse)
             currentTool.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
 
@@ -20,15 +18,23 @@ public class InputManager : MonoBehaviour {
         foreach (Touch touch in Input.touches) {
             switch (touch.phase) {
                 case TouchPhase.Began:
+                    Debug.Log("aaa");
+
                     DetectTouch(touch.position, false);
                     break;
                 case TouchPhase.Ended:
+                    Debug.Log("bbb");
+                    dragWithMouse = false;
+                    if (currentTool)
+                        currentTool.transform.position = originalPos;
                     DetectTouch(touch.position, true);
                     break;
                 case TouchPhase.Canceled:
+                    Debug.Log("ccc");
                     dragWithMouse = false;
-                    currentTool.transform.position = originalPos;
-                    currentTool = null;
+                    if (currentTool)
+                        currentTool.transform.position = originalPos;
+                    DetectTouch(touch.position, true);
                     break;
                 default:
                     break;
@@ -40,7 +46,8 @@ public class InputManager : MonoBehaviour {
             var position = Input.mousePosition;
             if (Input.GetMouseButtonUp(0)) {
                 dragWithMouse = false;
-                currentTool.transform.position = originalPos;
+                if(currentTool)
+                    currentTool.transform.position = originalPos;
                 DetectTouch(position, true);
             }
             if (Input.GetMouseButtonDown(0)) {
@@ -79,6 +86,7 @@ public class InputManager : MonoBehaviour {
                 }
             }
             if (isDrop && currentTool != null) {
+                currentTool.transform.position = originalPos;
                 SandTile tile = col.gameObject.GetComponentInParent<SandTile>();
                 Crabs crab = col.gameObject.GetComponent<Crabs>();
                 Debug.Log(currentTool.GetComponent<Tool>().ToolName());
